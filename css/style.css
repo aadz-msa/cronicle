@@ -1,0 +1,269 @@
+/* ── Reset & Base ─────────────────────────────── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0a0a0f;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: #e0d8c8;
+  cursor: crosshair;
+}
+
+#hall-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* ── Loading Screen ──────────────────────────── */
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #0a0a0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.loader-title {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.6em;
+  color: #d4af37;
+  text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+  margin-bottom: 0.5rem;
+}
+
+.loader-subtitle {
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.loader-bar {
+  width: 300px;
+  height: 2px;
+  background: #222;
+  margin: 0 auto 1rem;
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.loader-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #d4af37, #ffdd77);
+  transition: width 0.3s ease;
+}
+
+.loader-status {
+  font-size: 0.8rem;
+  color: #555;
+  letter-spacing: 0.15em;
+}
+
+/* ── HUD ─────────────────────────────────────── */
+#hud {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#hud > * {
+  pointer-events: auto;
+}
+
+#hud-title h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  color: #d4af37;
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+}
+
+#hud-title p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+#hud-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+#wing-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: #ccc;
+  min-width: 240px;
+  text-align: center;
+}
+
+.nav-btn {
+  background: none;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #d4af37;
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.nav-btn:hover {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: #d4af37;
+}
+
+#hud-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ctrl-btn {
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  color: #aaa;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  transition: all 0.2s;
+}
+
+.ctrl-btn:hover, .ctrl-btn.active {
+  color: #d4af37;
+  border-color: rgba(212, 175, 55, 0.4);
+  background: rgba(212, 175, 55, 0.08);
+}
+
+/* ── Info Panel ──────────────────────────────── */
+#info-panel {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 20;
+  width: 360px;
+  background: rgba(10, 10, 18, 0.92);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#info-panel.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+#info-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+#info-close:hover {
+  color: #d4af37;
+}
+
+#info-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #d4af37;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.1em;
+}
+
+#info-title-role {
+  font-size: 0.8rem;
+  color: #8888aa;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+#info-story {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+/* ── Tooltip ─────────────────────────────────── */
+#tooltip {
+  position: fixed;
+  z-index: 30;
+  background: rgba(10, 10, 18, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 0.35rem 0.7rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  color: #d4af37;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+#tooltip.hidden {
+  opacity: 0;
+}
+
+/* ── Scrollbar (for info panel if content overflows) ── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 2px;
+}

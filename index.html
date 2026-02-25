@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Byte Bash Blitz — Hall of Legacy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader-content">
+      <h1 class="loader-title">BYTE BASH BLITZ</h1>
+      <p class="loader-subtitle">Hall of Legacy</p>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-status">Forging the halls...</p>
+    </div>
+  </div>
+
+  <!-- HUD Overlay -->
+  <div id="hud">
+    <div id="hud-title">
+      <h2 id="hall-title">Byte Bash Blitz — Hall of Legacy</h2>
+      <p id="hall-subtitle">Where Legends Are Etched in Code</p>
+    </div>
+    <div id="hud-nav">
+      <button id="btn-prev" class="nav-btn" title="Previous Wing">&#9664;</button>
+      <span id="wing-label">Period I — Foundation Era</span>
+      <button id="btn-next" class="nav-btn" title="Next Wing">&#9654;</button>
+    </div>
+    <div id="hud-controls">
+      <button id="btn-tour" class="ctrl-btn">&#9654; Guided Tour</button>
+      <button id="btn-fly" class="ctrl-btn">&#9978; Free Fly</button>
+    </div>
+  </div>
+
+  <!-- Info Panel (hover/click) -->
+  <div id="info-panel" class="hidden">
+    <button id="info-close">&times;</button>
+    <h3 id="info-name"></h3>
+    <p id="info-title-role"></p>
+    <p id="info-story"></p>
+  </div>
+
+  <!-- Tooltip -->
+  <div id="tooltip" class="hidden"></div>
+
+  <!-- Three.js Canvas -->
+  <canvas id="hall-canvas"></canvas>
+
+  <!-- Import Map for Three.js -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+{
+  "hallTitle": "Byte Bash Blitz — Hall of Legacy",
+  "subtitle": "Where Legends Are Etched in Code",
+  "periods": [
+    {
+      "id": "period-1",
+      "name": "Period I",
+      "title": "Foundation Era",
+      "description": "The dawn of Byte Bash Blitz. Pioneers who laid the first stones of our community.",
+      "years": "2023–2024",
+      "theme": {
+        "accentColor": "#d4af37",
+        "torchColor": "#ff9944"
+      },
+      "council": {
+        "title": "Council of Architects",
+        "members": [
+          { "name": "Architect Alpha", "role": "Grand Architect", "motto": "Build what endures." },
+          { "name": "Architect Beta", "role": "Keeper of the Codebase", "motto": "Every line tells a story." },
+          { "name": "Architect Gamma", "role": "Warden of Community", "motto": "Together we compile." }
+        ]
+      },
+      "captains": {
+        "title": "Captains of Clans",
+        "members": [
+          { "name": "Captain Forge", "clan": "Clan Ironcode", "emblem": "anvil" },
+          { "name": "Captain Nexus", "clan": "Clan Datastream", "emblem": "circuit" },
+          { "name": "Captain Blaze", "clan": "Clan Pyrostack", "emblem": "flame" },
+          { "name": "Captain Drift", "clan": "Clan Cloudshift", "emblem": "cloud" }
+        ]
+      },
+      "inscribed": {
+        "title": "The Inscribed",
+        "members": [
+          {
+            "name": "Inscribed One",
+            "title": "The Spark",
+            "story": "Wrote the first CLI tool that bootstrapped our entire dev workflow. In a single weekend hackathon, they automated what took weeks. Their spark ignited a movement.",
+            "contribution": "CLI Automation Pioneer"
+          },
+          {
+            "name": "Inscribed Two",
+            "title": "The Architect of Bridges",
+            "story": "Built the API gateway that connected three disparate microservices into one cohesive system. Their bridge carried the weight of a thousand requests per second without flinching.",
+            "contribution": "API Gateway Design"
+          },
+          {
+            "name": "Inscribed Three",
+            "title": "The Silent Guardian",
+            "story": "Deployed the monitoring stack that saved production three times in the first month. They watched so others could sleep. Their dashboards became legendary.",
+            "contribution": "Monitoring & Observability"
+          }
+        ]
+      }
+    },
+    {
+      "id": "period-2",
+      "name": "Period II",
+      "title": "Expansion Era",
+      "description": "The community grew beyond borders. New clans formed, new challenges conquered.",
+      "years": "2024–2025",
+      "theme": {
+        "accentColor": "#7b68ee",
+        "torchColor": "#9988ff"
+      },
+      "council": {
+        "title": "Council of Architects",
+        "members": [
+          { "name": "Architect Delta", "role": "Vanguard of Scale", "motto": "Scale without compromise." },
+          { "name": "Architect Epsilon", "role": "Herald of Innovation", "motto": "Innovate or stagnate." },
+          { "name": "Architect Zeta", "role": "Sentinel of Security", "motto": "Trust nothing, verify everything." }
+        ]
+      },
+      "captains": {
+        "title": "Captains of Clans",
+        "members": [
+          { "name": "Captain Render", "clan": "Clan Pixelforge", "emblem": "diamond" },
+          { "name": "Captain Cipher", "clan": "Clan Cryptoshield", "emblem": "shield" },
+          { "name": "Captain Pulse", "clan": "Clan Livetick", "emblem": "heartbeat" },
+          { "name": "Captain Orbit", "clan": "Clan Starpath", "emblem": "star" }
+        ]
+      },
+      "inscribed": {
+        "title": "The Inscribed",
+        "members": [
+          {
+            "name": "Inscribed Four",
+            "title": "The Weaver",
+            "story": "Designed the real-time collaboration engine that let 50 developers code simultaneously. Their threads of logic wove a tapestry of collective creation.",
+            "contribution": "Real-time Collaboration Engine"
+          },
+          {
+            "name": "Inscribed Five",
+            "title": "The Cartographer",
+            "story": "Mapped the entire infrastructure into an interactive visualization. When chaos struck, their map guided the team through the storm to safe harbor.",
+            "contribution": "Infrastructure Visualization"
+          },
+          {
+            "name": "Inscribed Six",
+            "title": "The Alchemist",
+            "story": "Transformed legacy spaghetti into clean, tested microservices. What was once feared became a model of modern architecture. Their alchemy turned lead into gold.",
+            "contribution": "Legacy System Modernization"
+          }
+        ]
+      }
+    },
+    {
+      "id": "period-3",
+      "name": "Period III",
+      "title": "Ascension Era",
+      "description": "The era of mastery. The community reached new heights of technical excellence.",
+      "years": "2025–2026",
+      "theme": {
+        "accentColor": "#00ffd5",
+        "torchColor": "#44ffcc"
+      },
+      "council": {
+        "title": "Council of Architects",
+        "members": [
+          { "name": "Architect Eta", "role": "Oracle of Systems", "motto": "See the whole, fix the part." },
+          { "name": "Architect Theta", "role": "Forgemaster", "motto": "Temper code in the fires of review." },
+          { "name": "Architect Iota", "role": "Chronicler", "motto": "Document today, guide tomorrow." }
+        ]
+      },
+      "captains": {
+        "title": "Captains of Clans",
+        "members": [
+          { "name": "Captain Zenith", "clan": "Clan Peaknode", "emblem": "mountain" },
+          { "name": "Captain Flux", "clan": "Clan Wavefront", "emblem": "wave" },
+          { "name": "Captain Echo", "clan": "Clan Resonance", "emblem": "soundwave" },
+          { "name": "Captain Prism", "clan": "Clan Spectrum", "emblem": "prism" }
+        ]
+      },
+      "inscribed": {
+        "title": "The Inscribed",
+        "members": [
+          {
+            "name": "Inscribed Seven",
+            "title": "The Pathfinder",
+            "story": "Created the onboarding pipeline that reduced new member ramp-up from weeks to days. Their path lit the way for hundreds who followed.",
+            "contribution": "Developer Onboarding System"
+          },
+          {
+            "name": "Inscribed Eight",
+            "title": "The Timekeeper",
+            "story": "Built the CI/CD pipeline that cut deploy times by 80%. When seconds mattered, their clockwork precision delivered. Zero downtime became the new normal.",
+            "contribution": "CI/CD Pipeline Optimization"
+          },
+          {
+            "name": "Inscribed Nine",
+            "title": "The Dreamsmith",
+            "story": "Designed the community's open-source framework that was adopted by three external organizations. Their dream became everyone's reality.",
+            "contribution": "Open Source Framework"
+          }
+        ]
+      }
+    }
+  ]
+}
