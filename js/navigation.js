@@ -28,7 +28,7 @@ export class Navigation {
     this._moveDown = false;
     this._velocity = new THREE.Vector3();
     this._direction = new THREE.Vector3();
-    this._speed = 12;
+    this._speed = 24;
 
     // Tour animation
     this._tourActive = false;
